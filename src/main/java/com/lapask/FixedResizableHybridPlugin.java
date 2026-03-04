@@ -147,7 +147,7 @@ public class FixedResizableHybridPlugin extends Plugin
 			{
 				switch (identifier)
 				{
-					case InterfaceID.SkillGuide.UNIVERSE:
+					case InterfaceID.SkillGuide.WINDOW:
 						fixStatsGuide();
 						break;
 					case 398: // Fairy Ring
@@ -227,7 +227,7 @@ public class FixedResizableHybridPlugin extends Plugin
 				fixInterfaceDimensions();
 				break;
 			case 654: // Stats guide widget opened (osb>214.0>214.1)
-				widgetsToFixBeforeRender.add(InterfaceID.SkillGuide.UNIVERSE);
+				widgetsToFixBeforeRender.add(InterfaceID.SkillGuide.WINDOW);
 				break;
 			case 904: // Window resized
 				if (widgetsModified && config.isWideChatbox() && getGameClientLayout() == 2)
@@ -770,7 +770,7 @@ public class FixedResizableHybridPlugin extends Plugin
 		{
 			return;
 		}
-		Widget statsGuideWidget = client.getWidget(InterfaceID.SkillGuide.UNIVERSE);
+		Widget statsGuideWidget = client.getWidget(InterfaceID.SkillGuide.WINDOW);
 		if (statsGuideWidget == null)
 		{
 			return;
